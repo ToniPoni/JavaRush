@@ -33,16 +33,16 @@ public class Solution
         map.put("December",12);
 
         Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
-        int monthNumber = Integer.parseInt(reader.readLine());
+        String monthName = reader.readLine();
         while (true)
         {
             //получение «пары» элементов
             Map.Entry<String, Integer> pair = iterator.next();
             String key = pair.getKey();            //ключ
             Integer value = pair.getValue();//значение
-            if(value == monthNumber)
+            if(key.equals(monthName))
             {
-                System.out.println(key + " is " + monthNumber + " month");
+                System.out.println(key + " is " + value + " month");
                 break;
             }
 
